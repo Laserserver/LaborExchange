@@ -1,0 +1,94 @@
+
+#navbar {
+    height: 40px;
+    background: #333333;
+    display: flex;
+    width: 100%;
+    color: #DDDDDD;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar_hrefs {
+    text-decoration: none;
+    color: #dddddd;
+    padding: 10px;
+    display: inline-block;
+    float: right;
+}
+
+#ldiv {
+    display: flex;
+}
+
+#rdiv {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+
+
+#formDivs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#authForm {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    margin: 10px
+}
+
+input {
+    margin: 10px;
+}
+
+.button {
+    width: 100%;
+}
+
+label {
+    width: 100%;
+}
+
+
+
+form {
+    width: 100%;
+}

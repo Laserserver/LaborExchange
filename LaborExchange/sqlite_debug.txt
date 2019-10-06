@@ -1,0 +1,2 @@
+[DEBUG]  24 сен 2019, 13:48: AddUser error, constraint failed
+UNIQUE constraint failed: UserTable.login. Args: username - user, password not shown, type - Employee, description - 
