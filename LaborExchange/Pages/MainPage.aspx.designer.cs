@@ -40,6 +40,15 @@ namespace LaborExchange {
         protected global::System.Web.UI.WebControls.Repeater rptTypes;
         
         /// <summary>
+        /// dgUsers элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataGrid dgUsers;
+        
+        /// <summary>
         /// pnlLogout элемент управления.
         /// </summary>
         /// <remarks>

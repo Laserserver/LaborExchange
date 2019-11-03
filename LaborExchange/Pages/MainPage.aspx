@@ -10,18 +10,14 @@
 
 </head>
 <body>
-<div>
-    <a href="./Default.aspx">Default</a>
+<div id="navbar">
+    <a href="./MainPage.aspx" class="navbar_hrefs">Main Page</a>
 </div>
 <div id="main">
 <form id="DeauthForm" runat="server">
+    <h1>Repeater</h1>
     <div>
         <asp:Label runat="server" ID="lblHello"/>
-        
-        
-           
-        
-
         <asp:Repeater runat="server" ID="rptTypes">
             <HeaderTemplate>
                 <table border="2">
@@ -40,9 +36,21 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
-        
-
     </div>
+    
+    <h1>Datagrid</h1>
+    
+    <div>
+        <asp:DataGrid runat="server" ID="dgUsers" AutoGenerateColumns="False">
+            <Columns>
+                <asp:BoundColumn DataField="ID" HeaderText="ID"></asp:BoundColumn> 
+                <asp:BoundColumn DataField="Username" HeaderText="Логин"></asp:BoundColumn> 
+                <asp:BoundColumn DataField="Pass" HeaderText="Хэш пароля"></asp:BoundColumn> 
+                <asp:BoundColumn DataField="Usertype" HeaderText="Тип пользователя"></asp:BoundColumn> 
+            </Columns>
+        </asp:DataGrid>
+    </div>
+
     <asp:Panel ID="pnlLogout" runat="server">
         <asp:Button runat="server" ID="btnLogout" Text="Log Out" />
     </asp:Panel>

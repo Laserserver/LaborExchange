@@ -7,11 +7,13 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace LaborExchange.Pages {
-    
-    
-    public partial class TestChanger {
-        
+namespace LaborExchange.Pages
+{
+
+
+    public partial class TestChanger
+    {
+
         /// <summary>
         /// form1 элемент управления.
         /// </summary>
@@ -20,7 +22,7 @@ namespace LaborExchange.Pages {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// lblOldName элемент управления.
         /// </summary>
@@ -29,16 +31,16 @@ namespace LaborExchange.Pages {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblOldName;
-        
+
         /// <summary>
-        /// txtNewName элемент управления.
+        /// nameBox элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNewName;
-        
+        protected global::LEControls.NewNameBox nameBox;
+
         /// <summary>
         /// btnSave элемент управления.
         /// </summary>
@@ -47,7 +49,7 @@ namespace LaborExchange.Pages {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSave;
-        
+
         /// <summary>
         /// btnNew элемент управления.
         /// </summary>
@@ -56,7 +58,16 @@ namespace LaborExchange.Pages {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNew;
-        
+
+        /// <summary>
+        /// errorLbl элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorLbl;
+
         /// <summary>
         /// btnDelete элемент управления.
         /// </summary>

@@ -17,6 +17,14 @@ namespace LaborExchange
             public int ID { get; set; }
             public string Type { get; set; }
         }
+
+        class Ent2
+        {
+            public int ID { get; set; }
+            public string UserType { get; set; }
+            public string Username { get; set; }
+            public string Pass { get; set; }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Authenticated())
@@ -24,22 +32,34 @@ namespace LaborExchange
                 Response.Redirect("Default.aspx");
             }
 
-            
+
             List<Ent> ent = new List<Ent>();
             using (var context = new LaborExchangeEntities())
             {
-                var ents = (from t in context.CompanyType select t).ToList();
-                foreach (var s in ents)
-                {
-                    ent.Add(new Ent {Type = s.Type, ID = s.ID});
-                }
+                ent = (from s
+                        in context.CompanyType
+                       select new Ent
+                       {
+                           Type = s.Type,
+                           ID = s.ID
+                       }).ToList();
 
+                dgUsers.DataSource = (from c in context.Logins
+                    select new Ent2
+                    {
+                        Username = c.Username,
+                        ID = c.ID,
+                        UserType = c.UserType,
+                        Pass = c.Pass
+                    }).ToList();
+                dgUsers.DataBind();
                 rptTypes.DataSource = ent;
                 rptTypes.DataBind();
             }
 
+
             //lblHello.Text = $"Hello, {SQLiteLogic.SQLiteController.Instance.GetUserShowname(Request.Cookies["login"].Value)}";
-                btnLogout.Click += BtnLogout_Click;
+            btnLogout.Click += BtnLogout_Click;
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)
